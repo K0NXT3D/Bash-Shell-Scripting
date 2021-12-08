@@ -1,4 +1,5 @@
 #!/bin/bash
+# Works great with a scripted internal network netcat session or via ssh.
 date=$(date +"%Y-%m-%d_%H%M%S")
 ffmpeg -f v4l2 -video_size 1280x720 -i /dev/video0 -frames 1 int.$date.jpg
 ffmpeg -f v4l2 -video_size 1280x720 -i /dev/video1 -frames 1 usb.$date.jpg
